@@ -1,0 +1,6 @@
+@SmartRetailSystem_HostAddress = http://localhost:5105
+
+GET {{SmartRetailSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
