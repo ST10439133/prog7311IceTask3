@@ -1,6 +1,10 @@
-﻿namespace SmartRetailSystem.Services
+﻿using SmartRetailSystem.Models;
+
+namespace SmartRetailSystem.Services
 {
-    public class IProductService
+    public interface IProductService
     {
+        List<Product> GetAllProducts();
+        Product GetById(int id);
     }
 }

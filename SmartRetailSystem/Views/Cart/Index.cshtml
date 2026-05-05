@@ -1,0 +1,33 @@
+﻿@model List<SmartRetailSystem.Models.CartItem>
+
+    <div class="container mt-5">
+        <h2>Your Cart</h2>
+
+        @if (Model != null && Model.Count > 0)
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <a class="btn btn-success" href="/Checkout/Index">Checkout</a>
+    }
+    else
+    {
+        <p>Your cart is empty.</p>
+        <a class="btn btn-primary" href="/Product">Browse Products</a>
+    }
+    </div>
